@@ -1,0 +1,68 @@
+.header-container {
+    position: relative;
+    margin: 0;
+    padding: 11rem 5.5rem;
+    border: none;
+    height: 300px;
+    background-image: url("../images/img5.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white-text);
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+}
+
+/* Чорний напівпрозорий шар */
+.header-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.header-container h1 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.header-container p {
+    position: relative;
+    z-index: 2;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.header-button-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.header-button-container button {
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 60px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    font-size: 24;
+    cursor: pointer;
+}
+
+.header-button-container button:hover {
+    background-color: white;
+    color: var(--dark-text);
+}
+

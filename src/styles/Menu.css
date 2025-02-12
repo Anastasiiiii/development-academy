@@ -1,0 +1,30 @@
+.menu-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--main-red-color);
+    color: var(--white-text);
+}
+
+.menu{ 
+    height: 3rem;
+    display: flex;
+    padding: 1.5rem 2rem 0.8rem 2rem;
+}
+
+.menu a{
+    margin-left: auto;
+    margin-right: 4rem;
+    white-space: nowrap;
+    color: var(--white-text);
+    text-decoration: none;
+    font-family: Inter;
+    cursor: pointer;
+}
+
+.menu img {
+    width: 20rem;
+    height: 2rem;
+}
