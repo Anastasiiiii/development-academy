@@ -1,0 +1,17 @@
+.all-team-container{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    justify-content: center;
+}
+
+.team-info-container{
+    margin-bottom: 150px;
+}
+
+.team-info-container h1{
+    display: flex;
+    justify-content: center;
+    font-family: "Inter", serif;
+    margin-bottom: 80px;
+}

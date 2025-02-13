@@ -1,0 +1,43 @@
+.team-member-container{
+    position: relative;
+    width: 258px;
+}
+
+.team-member-info-container{
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Inter", serif;
+    width: 183px;
+    height: 126px;
+    color: var(--dark-text);
+    background-color: #F3F4F6;
+    padding: 10px;
+}
+
+.team-member-info-container p{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.main-photo img{
+    width: 258px;
+    height: 322px;
+    
+}
+
+.arrow-icon{
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.team-member-info-container:hover{
+    background-color: var(--main-red-color);
+    color: var(--white-text);
+}
+

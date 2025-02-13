@@ -1,0 +1,27 @@
+.advantages-container {
+    width: 400px;
+}
+
+.advantages-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.advantages-container li {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+    gap: 10px; 
+    margin-bottom: 15px;
+    text-align: justify;
+    color: var(--dark-text);
+}
+
+.advantages-container li::before {
+    content: "";
+    background: url('../images/icons/checkmark.png') no-repeat center center;
+    background-size: contain;
+    width: 20px;  
+    height: 20px;
+    flex-shrink: 0; 
+}
