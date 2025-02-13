@@ -1,0 +1,39 @@
+.manager-block-container {
+    background-color: var(--white-bg);
+    margin-top: 80px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin-bottom: 80px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+
+.manager-block-container h1{
+    display: flex;
+    justify-content: center;
+    font-family: Inter;
+    color: var(--dark-text);
+    margin-bottom: 80px;
+}
+.main-part-container {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    justify-content: center;
+    line-height: 1.5;
+    color: var(--dark-text);
+    font-family: Inter;
+}
+
+.main-part-container img{
+    width: 420px;
+    height: 420px;
+    border-radius: 10px;
+    box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.3)
+}
+
+.quote-part-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: 100px;
+}

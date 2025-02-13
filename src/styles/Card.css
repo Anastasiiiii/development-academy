@@ -1,0 +1,19 @@
+.card-container {
+    width: 330px;
+    height: 230px;
+    background-color: var(--white-bg);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: justify;
+    padding: 40px;
+    font-family: Inter;
+    color: var(--dark-text);
+}
+
+.card-container img{
+    margin-top: 25px;
+}
+
+.card-container p{
+    line-height: 1.5; 
+}

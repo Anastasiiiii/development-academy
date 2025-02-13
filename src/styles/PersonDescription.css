@@ -1,0 +1,10 @@
+.person-description-container {
+    width: 400px;
+    height: auto;
+    text-align: justify;
+}
+
+.person-description-container ul{
+    font-size: 15px;
+    line-height: 1.8;
+}
