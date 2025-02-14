@@ -1,0 +1,22 @@
+.program-element-container{
+    width: 1000px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 15px;
+    background-color: var(--white-bg);
+    font-family: "Inter";
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.program-day-p{
+    color: var(--main-red-color);
+    font-weight: 700;
+}
+
+.program-text-p {
+    width: 800px;
+    text-align: justify;
+}

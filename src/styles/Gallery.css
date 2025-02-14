@@ -1,0 +1,50 @@
+/* Основний контейнер для галереї */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Masonry Grid */
+.masonry-grid {
+    display: flex;
+    margin-left: -10px;
+    /* Додає простір між колонками */
+    width: auto;
+}
+
+.masonry-column {
+    padding-left: 10px;
+    background-clip: padding-box;
+}
+
+.gallery-item {
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 1100px) {
+    .masonry-grid {
+        margin-left: -5px;
+    }
+
+    .masonry-column {
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-container {
+        padding: 10px;
+    }
+}

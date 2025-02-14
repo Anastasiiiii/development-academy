@@ -1,0 +1,13 @@
+.program-elements-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.program-elements-container h1{
+    font-family: "Inter";
+    color: var(--dark-text);
+}

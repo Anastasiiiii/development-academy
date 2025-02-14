@@ -8,6 +8,8 @@ import ManagerBlock from './components/ManagerBlock';
 import Teaminfo from './components/TeamInfo';
 import Video from './components/Video';
 import "./styles/Formulas.css";
+import Gallery from './components/Gallery';
+import ProgramElements from './components/ProgramElements';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <ManagerBlock />
         <Teaminfo />
         <Video />
+        <Gallery />
+        <ProgramElements />
       </main>
     </div>
   );

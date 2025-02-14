@@ -1,0 +1,46 @@
+import React from "react";
+import Masonry from "react-masonry-css";
+import "../styles/Gallery.css";
+import "../styles/Formulas.css";
+//images
+
+import image1 from "../images/img7.jpg";
+import image2 from "../images/upteka2.png";
+import image3 from "../images/upteka.jpg";
+import image4 from "../images/img9.jpeg";
+import image5 from "../images/img8.jpeg";
+import image6 from "../images/img3.jpeg";
+import image7 from "../images/present.png";
+import image8 from "../images/photo-zone.png";
+
+
+const images = [
+    image1, image6, image3,
+    image4, image5, image7,
+    image2, image8
+];
+
+const Gallery = () => {
+    const breakpointColumns = {
+        default: 3,
+        1100: 2,
+        700: 1
+    };
+
+    return (
+        <div className="gallery-container">
+            <Masonry breakpointCols={breakpointColumns} className="masonry-grid" columnClassName="masonry-column">
+                {images.map((src, index) => (
+                    <div key={index} className="gallery-item">
+                        <img
+                            src={src}
+                            alt={`Gallery ${index + 1}`}
+                        />
+                    </div>
+                ))}
+            </Masonry>
+        </div>
+    );
+}
+
+export default Gallery;
