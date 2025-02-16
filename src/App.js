@@ -10,6 +10,9 @@ import Video from './components/Video';
 import "./styles/Formulas.css";
 import Gallery from './components/Gallery';
 import ProgramElements from './components/ProgramElements';
+import CarouselBox from './components/CarouselBox';
+import Form from './components/Form';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,7 +30,12 @@ function App() {
         <Video />
         <Gallery />
         <ProgramElements />
+        <CarouselBox />
+        <Form />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

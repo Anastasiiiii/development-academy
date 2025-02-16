@@ -1,0 +1,50 @@
+.carousel-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.carousel-content {
+    margin: auto 50px;
+}
+
+
+.carousel-content h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.profession {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.comment-text {
+    color: #333;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}

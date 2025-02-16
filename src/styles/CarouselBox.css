@@ -1,0 +1,16 @@
+.carousel-box-container {
+    width: 100%;
+    background-color: var(--dark-bg);
+    padding-top: 40px;
+    padding-bottom: 90px;
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-box-container h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-family: "inter";
+    color: var(--dark-text);
+}

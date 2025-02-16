@@ -1,0 +1,24 @@
+.footer-container{
+    display: flex;
+    gap: 55%;
+    padding: 50px 100px;
+    height: 80px;
+    background-color: var(--main-red-color);
+    color: var(--white-text);
+    font-family: "Inter";
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.footer-text{
+    font-weight: 200;
+}
+
+.social-links{
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a{
+    color: var(--white-text);
+}
