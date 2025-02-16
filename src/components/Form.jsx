@@ -8,13 +8,20 @@ const Form = () => {
         email: "",
         number: "",
         city: "",
+        trainingType: "offline",
         acomodation: "-"
     });
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxsHlX_OtzeNnXWZY79CZlD5w3F8HxqhWH443mG5YfznBZfZ7xpx4IqnPKH3i3d6xrdQA/exec"; // Вставте URL Apps Script
+    const scriptURL = "https://script.google.com/macros/s/AKfycbx3E7td0ul8mKkwdFIJXQykMN2mslJfbdkrBN329x95MAnBdryAcui6_zt0-NNEmXGrRQ/exec"; 
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+            ...(name === "trainingType" && value === "online" ? { acomodation: "-" } : {})
+        }));
     };
 
     const handleSubmit = async (e) => {
@@ -28,7 +35,7 @@ const Form = () => {
 
             if (response.ok) {
                 alert("✅ Заявка успішно відправлена!");
-                setFormData({ name: "", email: "", number: "", city: "", acomodation: "-" });
+                setFormData({ name: "", email: "", number: "", city: "", trainingType: "offline", acomodation: "-" });
             } else {
                 alert("❌ Помилка при відправленні. Спробуйте ще раз.");
             }
@@ -38,7 +45,7 @@ const Form = () => {
     };
 
     return (
-        <div className="form-container">
+        <div className="form-container" id="form-registration">
             <h1>Запишіться на навчання зараз</h1>
             <p>Якщо ви ще не є частиною нашої команди, але бажаєте приєднатися — перейдіть за <a href="#">посиланням</a> для подробиць.</p>
             <form onSubmit={handleSubmit} className="login-form">
@@ -54,11 +61,22 @@ const Form = () => {
                 <label>Місто</label>
                 <input type="text" name="city" value={formData.city} onChange={handleChange} placeholder="Введіть своє місто" required />
 
-                <label>Вам потрібне житло?</label>
-                <select name="acomodation" value={formData.acomodation} onChange={handleChange}>
-                    <option value="+">Так</option>
-                    <option value="-">Ні</option>
+                <label>Який тип навчання Ви обираєте?</label>
+                <select name="trainingType" value={formData.trainingType} onChange={handleChange}>
+                    <option value="offline">offline - Київ</option>
+                    <option value="online">online</option>
                 </select>
+
+                {/* Поле "Вам потрібне житло?" з'являється лише якщо вибрано offline */}
+                {formData.trainingType === "offline" && (
+                    <>
+                        <label>Вам потрібне житло?</label>
+                        <select name="acomodation" value={formData.acomodation} onChange={handleChange}>
+                            <option value="+">Так</option>
+                            <option value="-">Ні</option>
+                        </select>
+                    </>
+                )}
 
                 <button type="submit">Відправити Заявку</button>
             </form>
@@ -67,3 +85,4 @@ const Form = () => {
 };
 
 export default Form;
+ 

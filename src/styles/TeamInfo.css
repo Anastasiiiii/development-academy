@@ -15,3 +15,61 @@
     font-family: "Inter", serif;
     margin-bottom: 80px;
 }
+
+/* Team Member */
+.team-member {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+/* Popup Modal */
+.popup-modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-modal img {
+    width: 258px;
+    height: 322px;
+    border-radius: 8px;
+}
+
+.popup-modal h2 {
+    margin: 1rem 0;
+}
+
+.popup-modal p {
+    font-size: 1rem;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    border: none;
+    background: var(--main-red-color);
+    cursor: pointer;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

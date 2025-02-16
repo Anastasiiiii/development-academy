@@ -23,7 +23,7 @@ function App() {
       </header>
       <main>
         <Indicators />
-        <h1 className='reason-header'>Чому вам варто долучитись?</h1>
+        <h1 className='reason-header' id="details-container">Чому вам варто долучитись?</h1>
         <Cards />
         <ManagerBlock />
         <Teaminfo />
