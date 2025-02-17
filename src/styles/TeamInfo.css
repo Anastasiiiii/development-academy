@@ -26,23 +26,39 @@
     transform: scale(1.05);
 }
 
+
 /* Popup Modal */
 .popup-modal {
-    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    background: var(--background-color);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 500px;
-    width: 90%;
+    /*max-width: fit-content;*/
+    width: 800px;
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
+    font-family: "Inter";
+    color: var(--dark-text);
+    text-align: justify;
+}
+
+.popup-content {
+    background: transparent !important; /* Прибирає додатковий фон */
+    box-shadow: none !important; /* Забирає тінь */
+    border: none !important;
 }
 
 .popup-modal img {
-    width: 258px;
-    height: 322px;
+    width: 330px;
+    height: 422px;
     border-radius: 8px;
+    flex-shrink: 0;
+    margin-top: 20px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
 .popup-modal h2 {
@@ -54,15 +70,16 @@
 }
 
 /* Close Button */
-.close-btn {
+.close-modal-btn {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 0;
+    right: 30px;
     font-size: 2rem;
-    border: none;
-    background: var(--main-red-color);
+    background: none;
+    color: var(--dark-text);
     cursor: pointer;
 }
+
 
 /* Animation */
 @keyframes fadeIn {
@@ -73,3 +90,16 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 800px) {
+    .popup-modal {
+        flex-direction: column; /* В стовпчик на малих екранах */
+        max-width: 100%; /* Займає всю ширину */
+    }
+
+    .popup-modal img {
+        width: 100%;
+        height: auto; /* Пропорційна зміна висоти */
+    }
+}
+

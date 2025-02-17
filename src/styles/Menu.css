@@ -1,6 +1,7 @@
 .menu-container {
     position: relative;
     width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     border: none;
@@ -28,4 +29,20 @@
 .menu img {
     width: 20rem;
     height: 2rem;
+}
+
+@media (max-width: 1350px) {
+    .menu-container {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: var(--main-red-color);
+        color: var(--white-text);
+    }
+}
+
+@media (max-width: 450px) {
+
 }

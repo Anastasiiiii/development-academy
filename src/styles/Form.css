@@ -58,7 +58,7 @@ label {
     font-family: "Inter";
 }
 
-button {
+.login-form button {
     background-color: var(--main-red-color);
     color: white;
     padding: 15px 12px;
@@ -70,6 +70,6 @@ button {
     margin-top: 20px;
 }
 
-button:hover {
+.login-form button:hover {
     background-color: #820625;
 }

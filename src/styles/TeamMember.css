@@ -1,6 +1,7 @@
 .team-member-container{
     position: relative;
     width: 258px;
+    cursor: pointer;
 }
 
 .team-member-info-container{
