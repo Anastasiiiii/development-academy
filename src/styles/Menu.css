@@ -15,6 +15,7 @@
     padding: 1.5rem 2rem 0.8rem 2rem;
 }
 
+/* Styling for the navigation links */
 .menu a{
     margin-top: 10px;
     margin-left: auto;
@@ -26,23 +27,33 @@
     cursor: pointer;
 }
 
+/* Logo image inside the menu */
 .menu img {
     width: 20rem;
     height: 2rem;
 }
 
-@media (max-width: 1350px) {
-    .menu-container {
-        position: relative;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        border: none;
-        background-color: var(--main-red-color);
-        color: var(--white-text);
+/* Medium Screens (Tablets) */
+@media (max-width: 992px) {
+    .menu a{
+        margin-right: 2rem;
     }
 }
 
-@media (max-width: 450px) {
+/* Small devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .menu a{
+        font-size: smaller;
+        margin-right: 0;
+    }
+}
 
+
+/* Extra small devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .menu img {
+        width: 10rem;
+        height: 1rem;
+        margin-top: 0.7rem;
+    }
 }

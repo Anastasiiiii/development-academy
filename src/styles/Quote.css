@@ -38,3 +38,19 @@ blockquote p {
     margin-top: 10px;
     color: #666;
 }
+
+@media (max-width: 576px) {
+    blockquote p{
+        font-size: 14px;
+    }
+
+    .quote-mark img{
+        width: 32px;
+        height: 32px;
+    }
+
+    .quote-mark {
+        top: -20px;
+        left: 20px;
+    }
+}

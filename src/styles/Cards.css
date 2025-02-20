@@ -1,7 +1,32 @@
 .cards-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: stretch; /* Makes all items take equal height */
     justify-content: center;
-    gap: 60px;
-    margin-top: 60px;
+    gap: 50px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Larger Screens (Desktop) */
+@media (max-width: 1350px) {
+    .cards-container {
+        gap: 25px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 992px) {
+    .cards-container {
+        gap: 20px;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
 }

@@ -9,9 +9,9 @@
 
 .advantages-container li {
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-bottom: 10px;
-    gap: 10px; 
+    gap: 10px;
     margin-bottom: 15px;
     text-align: justify;
     color: var(--dark-text);
@@ -21,7 +21,26 @@
     content: "";
     background: url('../images/icons/checkmark.png') no-repeat center center;
     background-size: contain;
-    width: 20px;  
+    width: 20px;
     height: 20px;
-    flex-shrink: 0; 
+    flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+    .advantages-container {
+        width: 600px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 610px) {
+    .advantages-container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 610px) {
+    .advantages-container {
+        width: 300px;
+    }
 }

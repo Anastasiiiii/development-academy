@@ -1,22 +1,73 @@
-.program-element-container{
-    width: 1000px;
-    height: 90px;
+.program-element-container {
+    width: 1000px; 
+    min-height: 90px;
     display: flex;
-    justify-content: center;
-    gap: 80px;
+    justify-content: space-between; 
+    align-items: center; 
+    gap: clamp(20px, 5vw, 80px); 
     padding: 15px;
     background-color: var(--white-bg);
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     border-radius: 15px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; 
 }
 
-.program-day-p{
+/* date */
+.program-day-p {
     color: var(--main-red-color);
     font-weight: 700;
+    white-space: nowrap; 
+    flex-shrink: 0; 
 }
 
+/*text*/
 .program-text-p {
-    width: 800px;
+    flex: 1; 
+    max-width: 800px; 
     text-align: justify;
+}
+
+.program-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Larger Screens (Desktop) */
+@media (max-width: 1000px) {
+    .program-element-container {
+        width: 90%; 
+        gap: 40px;
+    }
+
+    .program-text-p {
+        max-width: 600px; 
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 756px) {
+    .program-element-container {
+        width: 90%;
+        gap: 30px;
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .program-text-p {
+        max-width: 100%;
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 480px) {
+    .program-element-container {
+        width: 100%;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .program-day-p {
+        font-size: 0.9rem; 
+    }
 }
