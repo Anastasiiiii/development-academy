@@ -82,7 +82,7 @@
     }
 }
 
-@media (max-width: 610px) {
+@media (max-width: 415px) {
     .video-container{
         width: 320px;
     }

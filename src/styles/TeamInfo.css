@@ -1,117 +1,92 @@
+/* Main Team Container */
 .all-team-container {
     display: flex;
     align-items: center;
     gap: 100px;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
 }
 
 .team-info-container {
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+    text-align: center;
 }
 
 .team-info-container h1 {
-    display: flex;
-    justify-content: center;
     font-family: "Inter", serif;
     margin-bottom: 80px;
+    text-align: center;
 }
 
 /* Team Member */
 .team-member {
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out;
 }
 
 .team-member:hover {
     transform: scale(1.05);
 }
 
-
 /* Popup Modal */
 .popup-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px; 
     background: var(--background-color);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    /*max-width: fit-content;*/
     width: 800px;
-    position: relative;
-    animation: fadeIn 0.3s ease-in-out;
+    max-width: 90vw;
     font-family: "Inter";
     color: var(--dark-text);
-    text-align: justify;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 1000;
 }
 
+/* Ensure popup content has proper spacing */
 .popup-content {
     background: transparent !important;
-    /* Прибирає додатковий фон */
     box-shadow: none !important;
-    /* Забирає тінь */
     border: none !important;
-}
-
-.popup-modal img {
-    width: 330px;
-    height: 422px;
-    border-radius: 8px;
-    flex-shrink: 0;
-    margin-top: 20px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
-}
-
-.popup-modal h2 {
-    margin: 1rem 0;
-}
-
-.popup-modal p {
-    font-size: 1rem;
+    width: 100%;
 }
 
 /* Close Button */
 .close-modal-btn {
     position: absolute;
-    top: 0;
-    right: 30px;
+    top: 15px;
+    right: 20px;
     font-size: 2rem;
     background: none;
     color: var(--dark-text);
     cursor: pointer;
+    border: none;
 }
 
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+/* Popup Image */
+.popup-modal img {
+    width: 330px;
+    height: 422px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 1350px) {
-    .all-team-container {
-        gap: 70px;
-    }
-}
 
 @media (max-width: 1200px) {
     .all-team-container {
-        gap: 40px;
-    }
-}
-
-@media (max-width: 1100px) {
-    .all-team-container {
-        gap: 50px;
+        gap: 120px;
     }
 }
 
@@ -120,36 +95,99 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 0;
-        width: 750px;
-        row-gap: 100px;
+        row-gap: 120px;
         place-items: center;
-        margin: 0;
-        padding: 0;
+        margin: 0 auto;
     }
 }
 
+@media (max-width: 768px) {
+    .popup-modal {
+        flex-direction: column;
+        height: 80%;
+        width: 90%;
+        padding: 1.5rem;
+        overflow-y: auto;
+    }
+
+    .popup-modal img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    .close-modal-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+    }
+    
+}
 
 @media (max-width: 576px) {
-    .team-info-container{
+    .team-info-container {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
-    .all-team-container{
+    .all-team-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 360px;
-        padding-left: 0;
-        margin: 0;
-        padding: 0;
     }
 }
 
 @media (max-width: 400px) {
-    .all-team-container{
-        width: 320px;
+    .popup-modal {
+        width: 90%;
+        max-width: 320px;
+        padding: 1rem;
+        overflow-y: auto; 
+        max-height: 90vh; 
+        text-align: left; 
+    }
+
+    .popup-modal img {
+        width: 100%;
+        height: auto;
+        max-width: 280px;
+        border-radius: 8px;
+    }
+
+    .popup-content {
+        font-size: 12px; 
+        line-height: 1.4;
+        word-wrap: break-word; 
+        padding: 10px; 
+        max-width: 100%; 
+    }
+
+    .popup-content h1, 
+    .popup-content h2, 
+    .popup-content h3 {
+        font-size: 14px; 
+        padding-left: 30px;
+    }
+
+    .popup-content p, 
+    .popup-content ul {
+        font-size: 12px; 
+        padding-left: 30px; 
+        padding-right: 30px;
+    }
+
+    .popup-content ul {
+        list-style-position: inside; 
+        padding-left: 30px; 
+    }
+
+    .close-modal-btn {
+        top: 0px;
+        right: 12px;
+        
     }
 }
+
 

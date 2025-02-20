@@ -1,24 +1,71 @@
-.footer-container{
+.footer-container {
     display: flex;
-    gap: 55%;
-    padding: 50px 100px;
-    height: 80px;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    justify-content: space-between; /* Spreads content evenly */
+    align-items: center;
+    padding: 30px 50px;
     background-color: var(--main-red-color);
     color: var(--white-text);
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-size: 15px;
-    overflow: hidden;
+    text-align: center;
 }
 
-.footer-text{
+/* Footer Text */
+.footer-text {
     font-weight: 200;
+    flex: 1; /* Allows text to take available space */
+    min-width: 200px;
 }
 
-.social-links{
+/* Social Links */
+.social-links-container {
+    flex: 1; /* Allows social links to take available space */
+    min-width: 200px;
+}
+
+.social-links {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    justify-content: center;
 }
 
-.social-links a{
+.social-links a {
     color: var(--white-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--hover-color); /* Adjust hover effect */
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Medium screens (tablets, smaller laptops) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 15px;
+        font-size: 13px; /* Adjust font size for readability */
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 8px;
+    }
 }

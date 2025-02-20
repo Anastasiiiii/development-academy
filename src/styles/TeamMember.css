@@ -2,6 +2,7 @@
     position: relative;
     width: 258px;
     cursor: pointer;
+    text-align: center;
 }
 
 .team-member-info-container {
@@ -28,7 +29,6 @@
 .main-photo img {
     width: 258px;
     height: 322px;
-
 }
 
 .arrow-icon {
@@ -42,6 +42,7 @@
     color: var(--white-text);
 }
 
+/* Responsive Styles */
 @media (max-width: 1100px) {
     .main-photo img {
         width: 179px;
@@ -50,7 +51,7 @@
 
     .team-member-info-container {
         width: 145px;
-        height: 80;
+        height: 80px;
         bottom: -70px;
         right: 0;
         padding: 8px;
@@ -74,7 +75,7 @@
     }
 }
 
-@media (max-width: 910px) {
+@media (max-width: 1200px) {
     .main-photo img {
         width: 258px;
         height: 322px;

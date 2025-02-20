@@ -17,7 +17,7 @@ import image9 from "../images/upteka(tablet).png";
 
 const imagesDesktop = [image1, image6, image3, image4, image5, image7, image2, image8];
 const imagesTablet = [image1, image6, image5, image4, image2, image9, image7, image8];
-const imagesMobile = [image5, image7, image1, image3, image2, image8, image6, image4];
+const imagesMobile = [image1, image4, image5, image6, image2, image9, image8, image7];
 
 const Gallery = () => {
     const [images, setImages] = useState(imagesDesktop);
