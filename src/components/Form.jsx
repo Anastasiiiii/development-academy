@@ -12,7 +12,7 @@ const Form = () => {
         acomodation: "-"
     });
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbx3E7td0ul8mKkwdFIJXQykMN2mslJfbdkrBN329x95MAnBdryAcui6_zt0-NNEmXGrRQ/exec"; 
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxqfTEDZMU_gT_ubi9RDNCQFEFtJaNFBe-2Neegcggf_fIK-W2XiB_DNUs3KFu5Fn_6/exec"; 
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,8 +32,12 @@ const Form = () => {
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString(),
             });
-
-            if (response.ok) {
+    
+            const result = await response.json();
+    
+            if (result.result === "duplicate") {
+                alert("⚠ Ви вже зареєстровані!");
+            } else if (result.result === "success") {
                 alert("✅ Заявка успішно відправлена!");
                 setFormData({ name: "", email: "", number: "", city: "", trainingType: "offline", acomodation: "-" });
             } else {
@@ -43,6 +47,7 @@ const Form = () => {
             alert("⚠ Помилка з'єднання: " + error.message);
         }
     };
+    
 
     return (
         <div className="form-container" id="form-registration">
