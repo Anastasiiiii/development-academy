@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/development-academy/static/css/main.57e0e475.css",
+    "main.js": "/development-academy/static/js/main.08a4500b.js",
+    "static/js/488.9c92ff38.chunk.js": "/development-academy/static/js/488.9c92ff38.chunk.js",
+    "static/media/academy-video.mp4": "/development-academy/static/media/academy-video.524af3a2f0c9537fbc66.mp4",
+    "static/media/upteka(tablet).png": "/development-academy/static/media/upteka(tablet).65df5101049534e670bc.png",
+    "static/media/upteka2.png": "/development-academy/static/media/upteka2.a29a5c55c243421057d1.png",
+    "static/media/present.png": "/development-academy/static/media/present.55e86cd982eb31b7002f.png",
+    "static/media/photo-zone.png": "/development-academy/static/media/photo-zone.faa7cf86d7234f818a97.png",
+    "static/media/photo2.png": "/development-academy/static/media/photo2.97aecb2258b8aae2c005.png",
+    "static/media/photo3.jpg": "/development-academy/static/media/photo3.a4126ca089042d9df0bb.jpg",
+    "static/media/img5.jpeg": "/development-academy/static/media/img5.bf2aa0a9b5d75ab21046.jpeg",
+    "static/media/img3.jpeg": "/development-academy/static/media/img3.b200dfe018a70071ae46.jpeg",
+    "static/media/img7.jpg": "/development-academy/static/media/img7.e64818807c8375eb060d.jpg",
+    "static/media/upteka.jpg": "/development-academy/static/media/upteka.e0d10a5bf9e41526dcad.jpg",
+    "static/media/img9.jpeg": "/development-academy/static/media/img9.43053d00b2c6c4cfd9d6.jpeg",
+    "static/media/img8.jpeg": "/development-academy/static/media/img8.c4bfbf93bda9a65167fb.jpeg",
+    "static/media/img4.jpg": "/development-academy/static/media/img4.b1313a8e19b2a76aca22.jpg",
+    "static/media/photo1.jpg": "/development-academy/static/media/photo1.abc635cf97f944f8f698.jpg",
+    "static/media/photo4.jpg": "/development-academy/static/media/photo4.bf9137f7339a9bb50995.jpg",
+    "static/media/logo.png": "/development-academy/static/media/logo.5165251d41b8d1dca8f9.png",
+    "index.html": "/development-academy/index.html",
+    "main.57e0e475.css.map": "/development-academy/static/css/main.57e0e475.css.map",
+    "main.08a4500b.js.map": "/development-academy/static/js/main.08a4500b.js.map",
+    "488.9c92ff38.chunk.js.map": "/development-academy/static/js/488.9c92ff38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57e0e475.css",
+    "static/js/main.08a4500b.js"
+  ]
+}
