@@ -12,7 +12,7 @@ const Form = () => {
         acomodation: "-"
     });
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxqfTEDZMU_gT_ubi9RDNCQFEFtJaNFBe-2Neegcggf_fIK-W2XiB_DNUs3KFu5Fn_6/exec"; 
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxqfTEDZMU_gT_ubi9RDNCQFEFtJaNFBe-2Neegcggf_fIK-W2XiB_DNUs3KFu5Fn_6/exec";
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,9 +32,9 @@ const Form = () => {
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: new URLSearchParams(formData).toString(),
             });
-    
+
             const result = await response.json();
-    
+
             if (result.result === "duplicate") {
                 alert("⚠ Ви вже зареєстровані!");
             } else if (result.result === "success") {
@@ -47,12 +47,12 @@ const Form = () => {
             alert("⚠ Помилка з'єднання: " + error.message);
         }
     };
-    
+
 
     return (
         <div className="form-container" id="form-registration">
             <h1>Запишіться на навчання зараз</h1>
-            <p>Якщо ви ще не є частиною нашої команди, але бажаєте приєднатися — перейдіть за <a href="#">посиланням</a> для подробиць.</p>
+            <p>Якщо ви ще не є частиною нашої команди, але бажаєте приєднатися — перейдіть за <a href="https://apteka911.ua/ua/company/job">посиланням</a> для подробиць.</p>
             <form onSubmit={handleSubmit} className="login-form">
                 <label>ПІБ</label>
                 <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Введіть своє ПІБ" required />
@@ -90,4 +90,3 @@ const Form = () => {
 };
 
 export default Form;
- 

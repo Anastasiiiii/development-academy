@@ -10,13 +10,13 @@ const Footer = () => {
             <div className="social-links-container">
                 <p>Долучайтесь до наших соціальних мереж</p>
                 <div class="social-links">
-                    <a href="#" target="_blank">
+                    <a href="https://www.facebook.com/apteki911" target="facebook">
                         Facebook
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/apteka_911/" target="instagram">
                         Instagram
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://www.tiktok.com/@apteka.911" target="tiktok">
                         TikTok
                     </a>
                 </div>

@@ -110,3 +110,9 @@
         left: 150px;
     }
 }
+
+@media (max-width: 400px) {
+    .team-member-container{
+        margin-left: -80px;
+    }
+}
